@@ -1,8 +1,8 @@
 # 🚀 Accelerated Learning Plan: Full Stack & Design Patterns (6 Weeks)
 
-**Goal:** Go from basic JS knowledge to a competent level in Angular, Node.js, and Software Architecture in 30 working days.
-**Intensity:** 9 hours per day (45 hours/week).
-**Methodology:** 40/20/40 Blocks (Theory/Break/Project) + Active Recall.
+- **Goal:** Go from basic JS knowledge to a competent level in Angular, Node.js, and Software Architecture in 30 working days.
+- **Intensity:** 9 hours per day (45 hours/week).
+- **Methodology:** 40/20/40 Blocks (Theory/Break/Project) + Active Recall.
 
 ---
 
