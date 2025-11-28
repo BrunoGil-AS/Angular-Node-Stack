@@ -1,0 +1,20 @@
+{
+  "name": "d5-end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -p .",
+    "watch": "tsc -p . --watch",
+    "exec": "node ./dist/index.js",
+    "fast": "npm run build && npm run exec",
+    "setup": "npm install typescript --save-dev && npx tsc --init && mkdir src && echo // Your TypeScript code goes here > src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
