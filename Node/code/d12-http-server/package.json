@@ -1,5 +1,5 @@
 {
-  "name": "d8-creational-2",
+  "name": "d12-http-server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,12 +12,10 @@
     "node-setup": "npm install typescript --save-dev @types/node && npx tsc --init && mkdir src && echo // Your TypeScript code goes here > src/index.ts"
   },
   "keywords": [
-    "creational"
+    "http",
+    "server"
   ],
   "author": "Bruno Gil R.",
   "license": "ISC",
-  "type": "module",
-  "devDependencies": {
-    "typescript": "^5.9.3"
-  }
+  "type": "module"
 }

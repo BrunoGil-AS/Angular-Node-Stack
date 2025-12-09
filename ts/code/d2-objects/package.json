@@ -1,16 +1,20 @@
 {
   "name": "d2-objects",
   "version": "1.0.0",
-  "description": "",
+  "description": "1. Create an enum `TaskStatus` with values: `Pending`, `InProgress`, `Completed`, `Failed`.\r 2. Create an interface `Task` with properties: `id: number`, `name: string`, `status: TaskStatus`.\r 3. Create an array of `Task` objects and implement a small helper that:\r    - Lists tasks grouped by status, and\r    - Checks whether a given status is final (Completed | Failed).\r 4. Put `TaskStatus` in its own file and import it from another folder to verify cross-file/module resolution.",
   "main": "index.js",
   "scripts": {
     "build": "tsc -p .",
     "watch": "tsc -p . --watch",
     "exec": "node ./dist/index.js",
-    "fast": "npm run build && npm run exec"
+    "fast": "npm run build && npm run exec",
+    "setup": "npm install typescript --save-dev && npx tsc --init && mkdir src && echo // Your TypeScript code goes here > src/index.ts",
+    "node-setup": "npm install typescript --save-dev @types/node && npx tsc --init && mkdir src && echo // Your TypeScript code goes here > src/index.ts"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "objects"
+  ],
+  "author": "Bruno Gil R.",
   "license": "ISC",
   "type": "module",
   "devDependencies": {

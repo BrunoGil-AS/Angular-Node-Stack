@@ -7,13 +7,16 @@
     "watch": "tsc -p . --watch",
     "exec": "node ./dist/index.js",
     "fast": "npm run build && npm run exec",
-    "setup": "npm install typescript --save-dev && npx tsc --init && mkdir src && echo // Your TypeScript code goes here > src/index.ts"
+    "setup": "npm install typescript --save-dev && npx tsc --init && mkdir src && echo // Your TypeScript code goes here > src/index.ts",
+    "node-setup": "npm install typescript --save-dev @types/node && npx tsc --init && mkdir src && echo // Your TypeScript code goes here > src/index.ts"
   },
-  "keywords": [],
+  "keywords": [
+    "classes"
+  ],
   "author": "Bruno Gil R.",
   "license": "ISC",
   "type": "module",
-  "name": "",
+  "name": "d3-classes",
   "devDependencies": {
     "typescript": "^5.9.3"
   }

@@ -1,17 +1,23 @@
 {
-  "name": "d1-foundation",
+  "name": "from-scratch",
   "version": "1.0.0",
-  "description": "",
+  "description": "1. Create an interface User with properties: id (number), name (string), email (optional string), and role (literal type: 'admin' | 'user').\r 2. Create an array of User objects.\r 3. Write a function that accepts a User and returns a string greeting. Try passing an object missing the id and observe the error.",
   "main": "index.js",
   "scripts": {
     "build": "tsc -p .",
     "watch": "tsc -p . --watch",
-    "exec": "node ./dist/index.js"
+    "exec": "node ./dist/index.js",
+    "fast": "npm run build && npm run exec",
+    "setup": "npm install typescript --save-dev && npx tsc --init && mkdir src && echo // Your TypeScript code goes here > src/index.ts",
+    "node-setup": "npm install typescript --save-dev @types/node && npx tsc --init && mkdir src && echo // Your TypeScript code goes here > src/index.ts"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "from",
+    "scratch"
+  ],
+  "author": "Bruno Gil R.",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "devDependencies": {
     "typescript": "^5.9.3"
   }
