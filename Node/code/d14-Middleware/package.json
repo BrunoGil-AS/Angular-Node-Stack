@@ -1,0 +1,31 @@
+{
+  "name": "d14-middleware",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -p .",
+    "watch": "tsc -p . --watch",
+    "exec": "node ./dist/index.js",
+    "fast": "npm run build && npm run exec",
+    "setup": "npm install typescript --save-dev && npx tsc --init && mkdir src && echo // Your TypeScript code goes here > src/index.ts",
+    "dev": "nodemon --watch src --ext ts --exec \"npm run build && node ./dist/index.js\"",
+    "node-setup": "npm install typescript --save-dev @types/node && npx tsc --init && mkdir src && echo // Your TypeScript code goes here > src/index.ts"
+  },
+  "keywords": [
+    "middleware"
+  ],
+  "author": "Bruno Gil R.",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.0.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.2.1"
+  }
+}
