@@ -1,0 +1,33 @@
+.sidebar {
+  width: 220px;
+  padding: 1rem;
+  background: #f8fafc;
+  border-right: 1px solid #e6e9ee;
+  flex-shrink: 0;
+  overflow-y: auto;
+  margin: 0;
+  position: relative;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #0f172a;
+  display: block;
+  padding: 0.5rem 0;
+}
+
+.sidebar h3 {
+  margin-top: 0;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.sidebar li {
+  margin-bottom: 0.5rem;
+}
