@@ -1,4 +1,19 @@
 <section class="content">
   <h2>Welcome</h2>
   <p>This is the main content area.</p>
+  <div class="content-container">
+    <ul>
+      @for (item of products; track item.id) {
+      <li [id]="item.id">
+        <h3>{{ item.name }}</h3>
+        @if(item.available) {
+        <p>{{ item.category }}</p>
+        <p>Price: {{ item.price | currency }}</p>
+        } @else {
+        <p class="unavailable">Currently Unavailable</p>
+        }
+      </li>
+      }
+    </ul>
+  </div>
 </section>
