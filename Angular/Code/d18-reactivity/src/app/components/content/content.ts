@@ -1,6 +1,7 @@
 import type { Product } from './../../../../../../../ts/code/d5-end/src/Product';
 import { Component } from '@angular/core';
 import { CurrencyPipe } from '@angular/common';
+import { Counter } from '../counter/counter';
 
 // add a extra field into the Product interface: Available (boolean)
 
@@ -10,7 +11,7 @@ interface ProductWithAvailability extends Product {
 
 @Component({
   selector: 'app-content',
-  imports: [CurrencyPipe],
+  imports: [CurrencyPipe, Counter],
   templateUrl: './content.html',
   styleUrl: './content.css',
 })
