@@ -15,3 +15,4 @@ build/
 out/
 .svelte-kit/
 .github/
+.hintrc
