@@ -2,11 +2,12 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "cli": {
-    "packageManager": "npm"
+    "packageManager": "npm",
+    "analytics": false
   },
   "newProjectRoot": "projects",
   "projects": {
-    "d16-core": {
+    "d19-in-output": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -54,10 +55,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "d16-core:build:production"
+              "buildTarget": "d19-in-output:build:production"
             },
             "development": {
-              "buildTarget": "d16-core:build:development"
+              "buildTarget": "d19-in-output:build:development"
             }
           },
           "defaultConfiguration": "development"
