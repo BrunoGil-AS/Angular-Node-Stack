@@ -1,8 +1,17 @@
-<aside class="sidebar">
+<button class="sidebar-toggle" (click)="toggleSidebar()" aria-label="Toggle menu">
+  <span class="hamburger" [class.open]="isOpen()">
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+  </span>
+</button>
+
+<aside class="sidebar" [class.open]="isOpen()">
+  <button class="sidebar-close" (click)="closeSidebar()" aria-label="Close menu">×</button>
   <h3>Menu</h3>
   <ul>
-    <li><a href="#">Option 1</a></li>
-    <li><a href="#">Option 2</a></li>
-    <li><a href="#">Option 3</a></li>
+    <li><a href="#" (click)="closeSidebar()">Option 1</a></li>
+    <li><a href="#" (click)="closeSidebar()">Option 2</a></li>
+    <li><a href="#" (click)="closeSidebar()">Option 3</a></li>
   </ul>
 </aside>

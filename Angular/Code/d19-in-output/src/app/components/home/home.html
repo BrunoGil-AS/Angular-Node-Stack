@@ -1,0 +1,22 @@
+<div class="home-container">
+  <div class="home-content">
+    <h1 class="home-title">Bienvenido a E-Shop</h1>
+    <h2 class="home-subtitle">Tu tienda online de confianza</h2>
+    
+    <p class="home-description">
+      Descubre nuestra amplia selección de productos de calidad.
+      Somos tu mejor opción para compras en línea seguras y confiables.
+    </p>
+    
+    <div class="home-features">
+      <div class="feature" *ngFor="let feature of features">
+        <div class="feature-icon">{{ feature.icon }}</div>
+        <h3 class="feature-title">{{ feature.title }}</h3>
+      </div>
+    </div>
+    
+    <button class="home-cta" routerLink="/products">
+      Ver Catálogo
+    </button>
+  </div>
+</div>

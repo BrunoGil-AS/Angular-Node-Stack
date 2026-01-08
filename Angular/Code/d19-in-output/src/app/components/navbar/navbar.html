@@ -1,8 +1,8 @@
 <nav class="navbar">
-  <h1>My App</h1>
-  <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Contact</a></li>
-  </ul>
+  <h1 class="brand">My App</h1>
+  <div class="nav-links">
+    <button class="nav-button" (click)="navigate('/')">Home</button>
+    <button class="nav-button" (click)="navigate('/products')">Productos</button>
+    <button class="nav-button" (click)="navigate('/contact')">Contacto</button>
+  </div>
 </nav>

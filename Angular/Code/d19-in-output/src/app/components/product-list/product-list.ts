@@ -1,16 +1,17 @@
-import { ProductService } from './../../services/product/product-service';
+import { ProductService } from '../../services/product/product-service';
 import { Component, inject } from '@angular/core';
 import { ProductCardComponent } from '../product-card/product-card.component';
 import { CartService } from '../../services/cart/cart-service';
+import { ɵEmptyOutletComponent } from '@angular/router';
 
 @Component({
-  selector: 'app-content',
+  selector: 'app-product-list',
   standalone: true,
   imports: [ProductCardComponent],
-  templateUrl: './content.html',
-  styleUrls: ['./content.css'],
+  templateUrl: './product-list.html',
+  styleUrls: ['./product-list.css'],
 })
-export class Content {
+export class ProductList {
   productService = inject(ProductService);
   cartService = inject(CartService);
 }
