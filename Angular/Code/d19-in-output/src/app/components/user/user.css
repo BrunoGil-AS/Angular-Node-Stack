@@ -1,0 +1,60 @@
+.user-list-container {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(var(--spacing-lg), 4vw, var(--spacing-2xl));
+  gap: clamp(var(--spacing-md), 2vw, var(--spacing-lg));
+  width: 100%;
+}
+
+.user-list-container h2 {
+  margin: 0;
+  font-size: clamp(var(--font-size-lg), 4vw, var(--font-size-xl));
+  color: var(--color-dark);
+  font-weight: var(--font-weight-bold);
+}
+
+.user-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: clamp(var(--spacing-lg), 2vw, var(--spacing-xl));
+  width: 100%;
+}
+
+/* Desktop (>1200px) - 3 columnas */
+@media screen and (min-width: 1200px) {
+  .user-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tablet (768px - 1023px) - 2 columnas */
+@media screen and (max-width: 1023px) {
+  .user-list-container {
+    padding: clamp(var(--spacing-md), 4vw, var(--spacing-lg));
+  }
+
+  .user-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(var(--spacing-md), 1.5vw, var(--spacing-lg));
+  }
+
+  .user-list-container h2 {
+    font-size: var(--font-size-lg);
+  }
+}
+
+/* Mobile (< 768px) - 1 columna */
+@media screen and (max-width: 767px) {
+  .user-list-container {
+    padding: clamp(var(--spacing-sm), 2vw, var(--spacing-md));
+  }
+
+  .user-list {
+    grid-template-columns: 1fr;
+    gap: clamp(var(--spacing-md), 1.5vw, var(--spacing-lg));
+  }
+
+  .user-list-container h2 {
+    font-size: var(--font-size-md);
+  }
+}

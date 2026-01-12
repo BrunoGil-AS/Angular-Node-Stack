@@ -1,0 +1,108 @@
+.card {
+  background: var(--color-neutral-light);
+  border: 1px solid var(--border-color-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 280px;
+  transition: var(--transition-default);
+  box-shadow: var(--shadow-sm);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(clamp(-2px, -0.5vw, -4px));
+}
+
+.card-header {
+  padding: clamp(var(--spacing-md), 3vw, var(--spacing-lg));
+  border-bottom: 1px solid var(--border-color-light);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-light) 0%,
+    var(--color-secondary-light) 100%
+  );
+}
+
+.card-title {
+  margin: 0;
+  font-size: clamp(var(--font-size-md), 2.5vw, var(--font-size-lg));
+  color: var(--color-dark);
+  font-weight: var(--font-weight-bold);
+  word-break: break-word;
+}
+
+.card-subtitle {
+  margin: var(--spacing-xs) 0 0 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-neutral-medium);
+  font-weight: var(--font-weight-regular);
+}
+
+.card-body {
+  padding: clamp(var(--spacing-md), 3vw, var(--spacing-lg));
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.card-text {
+  margin: 0 0 var(--spacing-sm) 0;
+  font-size: clamp(var(--font-size-xs), 1.5vw, var(--font-size-sm));
+  color: var(--color-neutral-dark);
+  line-height: var(--line-height-relaxed);
+  word-break: break-word;
+}
+
+.card-text:last-child {
+  margin-bottom: 0;
+}
+
+.card-text strong {
+  color: var(--color-dark);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Tablet (768px - 1023px) */
+@media screen and (max-width: 1023px) {
+  .card {
+    min-height: 260px;
+  }
+
+  .card-title {
+    font-size: var(--font-size-md);
+  }
+
+  .card-text {
+    font-size: var(--font-size-sm);
+  }
+}
+
+/* Mobile (< 768px) */
+@media screen and (max-width: 767px) {
+  .card {
+    min-height: 240px;
+  }
+
+  .card-header {
+    padding: var(--spacing-md);
+  }
+
+  .card-body {
+    padding: var(--spacing-md);
+  }
+
+  .card-title {
+    font-size: var(--font-size-md);
+  }
+
+  .card-text {
+    font-size: var(--font-size-xs);
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .card-subtitle {
+    font-size: var(--font-size-xs);
+    margin-top: var(--spacing-xs);
+  }
+}
