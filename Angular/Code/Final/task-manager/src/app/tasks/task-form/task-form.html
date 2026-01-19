@@ -1,0 +1,111 @@
+<div class="task-form-container">
+  <!-- Sidebar -->
+  <app-sidebar class="task-form-sidebar"></app-sidebar>
+
+  <!-- Form Content -->
+  <div class="task-form-content">
+    <!-- Back Button -->
+    <div class="task-form-header">
+      <button class="btn-back" (click)="goBack()">
+        <span>← Volver</span>
+      </button>
+    </div>
+
+    <!-- Edit Form -->
+    <article class="task-form-card">
+      <h2 class="form-title">Editar tarea</h2>
+
+      <form class="task-form">
+        <!-- Task ID (Read-only) -->
+        <div class="form-group">
+          <label for="taskId" class="form-label">ID de la tarea</label>
+          <input
+            type="text"
+            id="taskId"
+            class="form-input form-input--disabled"
+            [value]="taskId()"
+            disabled
+            aria-readonly="true"
+          />
+          <p class="form-hint">El ID de la tarea no puede ser modificado</p>
+        </div>
+
+        <!-- Title -->
+        <div class="form-group">
+          <label for="title" class="form-label required">Título</label>
+          <input
+            type="text"
+            id="title"
+            class="form-input"
+            [value]="taskTitle()"
+            (input)="onTitleChange($event)"
+            placeholder="Ingresa el título de la tarea"
+            required
+          />
+        </div>
+
+        <!-- Description -->
+        <div class="form-group">
+          <label for="description" class="form-label">Descripción</label>
+          <textarea
+            id="description"
+            class="form-textarea"
+            [value]="taskDescription()"
+            (input)="onDescriptionChange($event)"
+            placeholder="Ingresa una descripción detallada de la tarea"
+            rows="6"
+          ></textarea>
+        </div>
+
+        <!-- Status -->
+        <div class="form-group">
+          <label for="completed" class="form-label">Estado</label>
+          <div class="form-checkbox-group">
+            <input
+              type="checkbox"
+              id="completed"
+              class="form-checkbox"
+              [checked]="isCompleted()"
+              (change)="onStatusChange($event)"
+            />
+            <label for="completed" class="form-checkbox-label"> Marcar como completada </label>
+          </div>
+        </div>
+
+        <!-- Read-only Dates -->
+        <div class="form-dates">
+          <div class="form-group">
+            <label for="createdAt" class="form-label">Fecha de creación</label>
+            <input
+              type="text"
+              id="createdAt"
+              class="form-input form-input--disabled"
+              [value]="createdAt() | date: 'medium'"
+              disabled
+              aria-readonly="true"
+            />
+          </div>
+          <div class="form-group">
+            <label for="updatedAt" class="form-label">Última actualización</label>
+            <input
+              type="text"
+              id="updatedAt"
+              class="form-input form-input--disabled"
+              [value]="updatedAt() | date: 'medium'"
+              disabled
+              aria-readonly="true"
+            />
+          </div>
+        </div>
+
+        <!-- Form Actions -->
+        <div class="form-actions">
+          <button type="button" class="btn btn-secondary" (click)="goBack()">Cancelar</button>
+          <button type="submit" class="btn btn-primary" (click)="saveChanges()">
+            Guardar cambios
+          </button>
+        </div>
+      </form>
+    </article>
+  </div>
+</div>
