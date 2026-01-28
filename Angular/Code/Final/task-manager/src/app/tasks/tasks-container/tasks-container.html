@@ -1,6 +1,6 @@
 <div class="tasks-container">
   <!-- Sidebar -->
-  <app-sidebar class="tasks-sidebar"></app-sidebar>
+  <app-sidebar class="tasks-sidebar" [mode]="'container'"></app-sidebar>
 
   <!-- Task List Content -->
   <div class="tasks-content">
@@ -12,7 +12,9 @@
     <div class="tasks-list">
       <div class="task-cards-grid">
         <!-- TaskCard components will be rendered here -->
-        <app-task-card></app-task-card>
+        @for (task of tasks(); track task.id) {
+          <app-task-card [task]="task"></app-task-card>
+        }
       </div>
 
       <!-- Empty state -->
