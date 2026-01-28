@@ -26,7 +26,7 @@ Se han generado **HTML y CSS** para 5 componentes principales manteniendo cohere
 
 ## 📌 TasksContainer Component
 
-### Funcionalidad
+### Funcionalidad del TasksContainer
 
 - Vista principal de todas las tareas
 - Integra Sidebar + Listado de tareas
@@ -34,7 +34,7 @@ Se han generado **HTML y CSS** para 5 componentes principales manteniendo cohere
 
 ### Estructura
 
-```
+```plain
 tasks-container
 ├── app-sidebar
 └── tasks-content
@@ -42,7 +42,7 @@ tasks-container
     └── task-cards-grid (lista de cards)
 ```
 
-### Características de Diseño
+### Características de Diseño del TasksContainer
 
 - Flexbox responsivo
 - Grilla automática de cards (min 300px)
@@ -53,13 +53,13 @@ tasks-container
 
 ## 🎯 TaskCard Component
 
-### Funcionalidad
+### Funcionalidad del TaskCard
 
 - Representa una tarea individual
 - Muestra: título, descripción, estado, fecha
 - Botón "Detalles" para navegar
 
-### Características de Diseño
+### Características de Diseño del TaskCard
 
 - Tarjeta con sombra y hover effect
 - Badge de estado (coloreado según completado/pendiente)
@@ -84,7 +84,7 @@ tasks-container
 - Cada tarea es clickeable
 - Navega entre tareas rápidamente
 
-### Características de Diseño
+### Características de Diseño del Sidebar
 
 - Diseño vertical modular
 - Filtros con iconos de color (⏳ amarillo, ✓ verde)
@@ -95,7 +95,7 @@ tasks-container
 
 ## 🔍 TaskDetails Component
 
-### Funcionalidad
+### Funcionalidad de TaskDetails
 
 - Vista detallada de una tarea
 - Muestra todos los campos del modelo
@@ -103,7 +103,7 @@ tasks-container
 - Botón "Editar" que abre el formulario
 - Sidebar con lista de tareas
 
-### Características de Diseño
+### Características de Diseño de TaskDetails
 
 - Layout similar a TaskContainer (con sidebar)
 - Información organizada en secciones
@@ -116,7 +116,7 @@ tasks-container
 
 ## ✏️ TaskForm Component
 
-### Funcionalidad
+### Funcionalidad de TaskForm
 
 - Formulario de edición (NO creación)
 - Campos editables: título, descripción, estado
@@ -124,7 +124,7 @@ tasks-container
 - Botones: Cancelar, Guardar cambios
 - Sidebar con lista de tareas
 
-### Características de Diseño
+### Características de Diseño de TaskForm
 
 - Formulario bien estructura con grupos de campos
 - Inputs con estados: normal, focus, disabled
@@ -149,7 +149,7 @@ tasks-container
 
 ### Paleta de Colores
 
-```
+```plain
 Primary:    #4f46e5 (Indigo)
 Secondary:  #06b6d4 (Cyan)
 Success:    #10b981 (Green)
@@ -221,7 +221,7 @@ Info:       #3b82f6 (Blue)
 
 ## 📦 Archivos Generados/Modificados
 
-```
+```plain
 src/app/
 ├── home/
 │   ├── home.html        ✅ Actualizado
