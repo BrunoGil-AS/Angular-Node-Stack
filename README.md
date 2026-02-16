@@ -88,6 +88,11 @@ _Database, Security, and Deployment._
 | 30  | Deployment and Final Full Stack Project | [View Detail](./Node/node.md#day-5-day-30-deployment--capstone)         |
 
 ---
+## Final Project 
+
+[`The Task Manager app`](https://github.com/BrunoGil-AS/Task-Manager) is a full-stack web project that allows users to register, log in, and securely manage their tasks using CRUD operations, filters, sorting, and a detailed view. The frontend is developed with Angular 21 and a component-based architecture with reactive services, while the backend uses Express + TypeScript with validations, security middleware, and domain-organized controllers. Persistence and authentication are integrated with Supabase, and the repository includes technical documentation (README, OpenAPI, diagrams, authentication guides, and testing) to facilitate maintenance, collaboration, and deployment.
+
+---
 
 ## 🛠 Recommended General Resources
 
